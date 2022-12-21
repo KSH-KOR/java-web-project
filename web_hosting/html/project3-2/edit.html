@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project3-2</title>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous"
+    >
+</head>
+<body>
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <img class="bi me-2" width="40" height="32" src = "book.svg" alt="My Happy SVG"/>
+            <span class="fs-4">한동 용어 사전</span>
+        </a>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Search</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Favorite</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Request</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+        </ul>
+    </header>
+</div>
+<form class="container" method="get">
+    <div class="form-group">
+        <label for="word">단어</label>
+        <input  class="form-control" id="word" name="word" value="족막" placeholder="바꿀 단어 이름이 무엇인가요?" required>
+        <label for="wordMeaning">단어 뜻</label>
+        <input  class="form-control" id="wordMeaning" name="wordMeaning" value="삼촌네 족발+막국수" placeholder="바꿀 단어 뜻이 무엇인가요?" required>
+    </div>
+
+    <div class="form-group">
+        <label for="category">Select Category</label>
+        <select class="form-control" id="category" name="category">
+            <option >학교생활</option>
+            <option>강의관련</option>
+            <option>학교시설</option>
+            <option selected="selected">음식</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="extraExplanation">단어 추가 설명</label>
+        <textarea class="form-control" id="extraExplanation" name="extraExplanation" placeholder="바꿀 단어 추가 설명이 무엇인가요?" rows="3">삼촌네 찜닭이라는 가게의 메뉴 중에 하나임.</textarea>
+    </div>
+    <button class="btn" onclick=deleteAction()>Delete</button>
+    <a class="btn" href="index.html"> Cancel </a>
+    <button type="submit" class="btn btn-primary active">Edit</button>
+</form>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"
+></script>
+<script>
+    function deleteAction() {
+        return confirm("Are you sure you want to delete?");
+    }
+</script>
+</body>
+</html>
